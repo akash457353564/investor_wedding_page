@@ -2,12 +2,17 @@
 const calendar_node = document.querySelector('.calender')
 
 const calendar = new FullCalendar.Calendar(calendar_node, {
+    
     initialView: 'dayGridMonth',
+    selectable: true,
     headerToolbar: {
         left: 'prev',
         center: 'title',
         right: 'next'
-    },
+    },dateClick: function(info) {
+        //alert('clicked ' + info.dateStr);
+        
+      },
     events: [
         {
             title: 'Booked',

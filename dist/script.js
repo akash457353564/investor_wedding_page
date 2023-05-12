@@ -632,8 +632,9 @@ guest_field.addEventListener("focusout", ()=>{
 let price_after_discount;
 let cash_redeem;
 let final_price_value;
+let negotiated_price_value;
 discount_percent_field.addEventListener("focusout", ()=>{
-    let negotiated_price_value = discount_percent_field.value / 100 * number;
+    negotiated_price_value = discount_percent_field.value / 100 * number;
     price_after_discount = number - discount_percent_field.value / 100 * number;
     negotiated_price.textContent = `(-)${new Intl.NumberFormat("en-IN", {
         style: "currency",
@@ -651,6 +652,12 @@ cash_redeem_field.addEventListener("focusout", ()=>{
         style: "currency",
         currency: "INR"
     }).format(final_price_value);
+    let total_saved = `${Number(negotiated_price_value) + Number(cash_redeem)}`;
+    console.log(total_saved);
+    document.querySelector("#saved_txt").textContent = `You have saved upto ${new Intl.NumberFormat("en-IN", {
+        style: "currency",
+        currency: "INR"
+    }).format(total_saved)}`;
 });
 //////////////CALCULATION ENDS////////////////
 /////////////////SHOWING IMAGES MODAL////////////////////

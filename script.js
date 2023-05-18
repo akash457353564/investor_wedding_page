@@ -51,6 +51,26 @@ const calendar = new FullCalendar.Calendar(calendar_node, {
             title: 'Booked',
             date: '2023-05-13',
             backgroundColor: '#FF6296'
+        },
+        {
+            title: 'Booked',
+            date: '2023-05-22',
+            backgroundColor: '#FF6296'
+        },
+        {
+            title: 'Booked',
+            date: '2023-06-03',
+            backgroundColor: '#FF6296'
+        },
+        {
+            title: 'Booked',
+            date: '2023-06-12',
+            backgroundColor: '#FF6296'
+        },
+        {
+            title: 'Booked',
+            date: '2023-06-26',
+            backgroundColor: '#FF6296'
         }
     ]
   });
